@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Simple Chart</title>
+	
+	
+</head>
+<body>
+	
+	<h1 style="padding-left: 20%;background-color: lightskyblue;border: 5px solid black;"> Charts using AJAX and JSON</h1>
+	<div>
+		<!--	Pie Chart -->
+		<div id="efg" class="chart-container" style="width: 45%; border: 3px solid black; display: inline-block;">
+			<canvas id="pie" width="300px" height="300px"></canvas>
+			
+
+		</div>
+
+		<!--	Bar  Chart -->
+		<div id="abc"class="chart-container" style="height: 100%; width: 45%; border: 3px solid #73AD21;display: inline-block;margin-left: 100px ">
+			<canvas id="myChart" width="300px" height="300px"></canvas>
+		</div>
+
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	<script type="text/javascript">
+
+		var jsonData;		// it holds data to be entered in the chart.	
+
+		window.onload = init;
+
+		function init() {
+			loadJSON(function(response){
+				jsonData = JSON.parse(response);
+				makeCharts();
+			})
+
+			
+		}
+
+
+		function loadJSON(console) {
+			var req = new XMLHttpRequest();
+			req.onreadystatechange = function () {
+				if(req.readyState == 4 && req.status ==200){
+					console(this.responseText);
+				}
+			}
+			// https://api.myjson.com/bins/dx61d
+			// https://api.myjson.com/bins/ro2e9
+			req.open('GET','https://api.myjson.com/bins/dx61d',true);
+			req.send();
+			
+		}
+
+
+
+
+		function getColor() {
+			var color =  'rgb('+(Math.floor(Math.random()*255))+','+(Math.floor(Math.random()*255))+','+(Math.floor(Math.random()*255))+')';;
+			return color;
+		}
+
+		function getColorArray(len){
+			var arr = [];
+			for(var i=0; i<len; i++){
+				arr.push(getColor());
+			}
+
+			return arr;
+		}
+
+		function setData() {
+			/*console.log('setData : '+(++count));*/
+			var labelList =[];
+			var valueList = [];
+			var index=0;
+			while(jsonData[index]){
+
+				labelList.push(jsonData[index].partyName);
+				valueList.push(jsonData[index].voteCount);
+				index++;
+			}
+
+			return {
+				labels:labelList,
+				datasets:[{
+					label: 'Poll Result',
+					backgroundColor : getColorArray(index),
+		            data: valueList
+
+				}]
+			};
+		}
+
+
+		
+		function makeCharts() {
+				/*console.log('makeCharts : '+(++count));*/
+			var ctx = 'myChart';
+			var barChart = new Chart(ctx, {
+				type: 'bar',
+				data: setData(),
+				options:{}
+					
+			});
+			
+			barChart.data.backgroundColor = getColor();
+
+			// pie chart
+			var ctx2 = 'pie';
+			var pieChart =  new Chart(ctx2, {
+				type:'pie',
+				data: setData(),
+				options: {},
+				
+			});
+			
+		}
+
+		
+
+
+		
+
+
+	</script>
+
+</body>
+</html>
