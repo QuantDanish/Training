@@ -1,0 +1,257 @@
+#productDetails {
+    /* constructing*/
+    width: 48.9%;
+    height: 224px;
+    border-radius: 8px;
+    background-color: #B0B0B0;
+    background: url("abc.png") no-repeat;
+    background-position: 194px 10px;
+    background-size: 350px 236px;
+    padding: 5px;
+    /* positioning*/
+    display: inline;
+    position: absolute;
+    left: 1%;
+    top: 48%;
+
+
+}
+
+
+
+#productDetails p{
+    color: white;
+    display: block;
+}
+
+#pname {
+    font-size: 2.5em;
+    padding: 5px 0 5px 20px;
+}
+
+#productDetails button{
+    border-radius: 6px;
+    height: 32px;
+    width: 170px;
+    padding: 5px 10px 5px 10px;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 9px;
+    left:6%;
+}
+
+/******************************************************************************/
+#transactionDetails {
+    /* constructing*/
+    width: 49%;
+    height: 510px;
+    border-radius: 8px;
+    background-color: white;
+
+    /* positioning*/
+    position: absolute;
+    top:48%;
+    display: inline-block;
+    right: 1%;
+}
+
+#transactionDetails div {
+    border: 1px solid black;
+    width: 100%;
+    display: block;
+
+}
+
+#one{
+    height: 10%;
+    background-color: #B0B0B0;
+}
+
+#one img {
+    display: inline-block;
+    margin:5px 5px 5px 20px;
+}
+
+#one p {
+    display: inline-flex;
+    position: relative;
+    bottom: 45%;
+    font-size: 1.5em;
+    color:white;
+}
+
+/*******************************************************/
+#two {
+    height: 25%;
+    background-color: #B0B0B0;
+}
+
+#two div{
+    height: 24%;
+    background-color: white;
+    border:1px solid darkgray;
+}
+
+#two p{
+    padding:5px;
+    height: 60%;
+    position: relative;
+}
+
+#two .left-txt {
+    width:20%;
+    text-align: center;
+
+}
+
+#two .center-txt {
+    width:50%;
+    text-align: center;
+
+}
+
+#two .right-txt {
+    width:10%;
+    text-align: center;
+    float: right;
+}
+/************************************************************/
+#three {
+    height: 10%;
+    background-color: #cccccc;
+}
+
+#three p{
+    width: 40%;
+    height: 60%;
+    padding:5px;
+    text-align: center;
+    color:white;
+    position: relative;
+}
+/*******************************************************/
+#four {
+    height: 25%;
+    background-color: #cccccc;
+}
+#four div{
+    height: 99%;
+    display: inline-flex;
+    position: relative;
+}
+
+#four .a{
+    width: 41%;
+    background: url("totalSpending.png") no-repeat;
+    background-size: 100%;
+    background-position: 0px 0px;
+}
+
+#four .b{
+    width: 19%;
+    background: url("pic.png") no-repeat;
+    background-size: 99%;
+    background-position: 0px 2px;
+    float: right;
+}
+
+#four p {
+    display: inline-block;
+    position: relative;
+    padding:5px;
+    margin:0;
+    color:black;
+}
+/********************************************************/
+#five {
+    height: 28%;
+}
+
+#five div {
+    width: 49%;
+    height: 98%;
+    display: inline-flex;
+}
+
+#five p {
+    display: block;
+    text-align: left;
+    padding:10px;
+
+}
+
+#five button {
+    display: inline-flex;
+    position: relative;
+    right: 21%;
+    top: 70%;
+    max-width: 100%;
+    height: 30px;
+    border-radius: 6px;
+
+    padding:5px 70px 5px 70px;
+    text-aline:center;
+    background-color:white;
+
+
+}
+
+#five .sa {
+    padding: 10px 40px 10px 10px;
+    max-width: 100%;
+    height: 37px;
+    border: 1px solid #e3e3e3;
+    border-radius: 6px;
+    background: url("selectbox_arrow.png") right center no-repeat;
+    background-color: #fff;
+    color: darkgrey;
+    line-height: 16px !important;
+
+    -webkit-appearance: none;
+
+    /*position: relative;
+    bottom: -22%;
+    box-shadow: 1px 1px lightgrey;*/
+}
+
+/******************************************************/
+#tdm {
+    display: inline-flex;
+    float: right;
+    padding: 5px 150px 5px 5px;
+    margin: 10px 10px 10px 5px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto !important;
+    background: url("selectbox_arrow.png") right center no-repeat;
+    background-color: white;
+    color: darkgray;
+    line-height: 20px;
+    -webkit-appearance: none;
+}
+
+
+/*************************************************************/
+#calender {
+    width: 24.5%;
+    height: 275px;
+    background-color: white;
+    border-radius: 8px;
+    position: absolute;
+    display: inline-block;
+    left: 1%;
+    top:71.5%;
+}
+
+#stockM {
+    width: 23.6%;
+    height: 275px;
+    background-color: white;
+    border-radius: 8px;
+    position: absolute;
+    display: inline-block;
+    left: 26%;
+    top:71.5%;
+}

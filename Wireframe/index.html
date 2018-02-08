@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+
+    <title> my wireframe </title>
+
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="search box.css">
+    <link rel="stylesheet" href="bank name.css">
+    <link rel="stylesheet" href="row3.css">
+    <link rel="stylesheet" href="row5.css">
+</head>
+<body>
+    <div id="page">
+        <div id="innerPage">
+
+            <div id="row1">
+
+                <input id= "searchBox" type="text" placeholder="Search..">
+                <button id= "logoutButton">LOGOUT</button>
+
+            </div>
+
+
+
+
+            <div id="row2 ">
+                <div id="bankName">
+                    <p id ='bn'> My Bank </p>
+                    <img id ="settingIcon" src="setting icon.png" width="20" height="20">
+                    <img id = 'upic' src="user pic.png " width="100" height="100">
+                    <p id="uName">Account Holder Name</p>
+                    <div id="notiCount"><p>0</p></div>
+                    <p id="greeting">Welcome to <span> my bank</span> </p>
+                    <p id="ll"> your last login <span id="lastLoginTime">yesterday 10:00 pm</span> </p>
+
+                </div>
+
+                <div id = "accountInfo">
+                    <div id="left">
+                        <p>YOUR PREMIERE ACCOUNT</p>
+                        <P id="balance">$ 0.00</P>
+                        <select name="acType">
+                            <option value="">Your Account Type</option>
+                        </select>
+                    </div>
+                    <div id="right">
+                        <p>View Statement</p><hr style="color: darkgray">
+                        <p>Make A Quick Transfer</p><hr style="color: darkgray">
+                        <p>More Options</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div id="row3">
+                <div><p>Take a look</p></div>
+                <div><p>Account</p></div>
+                <div><p>Overdraft</p></div>
+                <div><p>Credit</p></div>
+                <div><p>Payments</p></div>
+                <div><p>Deposits</p></div>
+                <div><p>Cards</p></div>
+
+
+
+            </div>
+
+
+<!--**************************This is Row 4 ************************************************-->
+
+            <div id="row4">
+                <div>
+                    <div class = left-div>
+                        <p><b>Credit Card</b></p>
+                        <p><br><br>**** **** **** 1234</p>
+                        <p>Your Credit Limit : $ <span>0.00</span><br>Available: $<span>0.00</span> </p>
+
+                    </div>
+                    <div class="right-div">
+                        <button>BUTTON</button>
+                    </div>
+                </div>
+            <!--**************************************************-->
+                <div>
+                    <div class="left-div">
+                        <p><b>Urgent Pending Payment</b></p>
+                        <p id="pendingAmount"></b>$ 0.00</p>
+                        <p style="font-size:13px">Monthly Pending Payment<br><b>Total: $<span id="mpa" >0.00</span></b></p>
+
+                    </div>
+                    <div class="right-div">
+                        <button >PAY NOW</button>
+                    </div>
+                </div>
+                <!--**********  Investments  ****************************************-->
+                <div>
+
+                    <div class="left-div">
+                        <p><b>Investments<br></b></p>
+                        <p id="im"><b>$ 0.0</b></p>
+                        <p><b><br><br>Total: $<span id="invt">0.0</span></b></p>
+
+                    </div>
+                    <div class="right-div">
+                        <button>DETAILS</button>
+                    </div>
+
+                </div>
+                <!--************** Documents ************************************-->
+                <div>
+                    <div class="left-div">
+                        <p><b>Documents</b><br>
+                            <span style="font-size: 18px"><br>YOU HAVE <span>2</span> New Documents</span>
+                        </p>
+                        <p><br><b><span id = 'doc'>1</span> Important</b></p>
+                    </div>
+                    <div class="right-div">
+                        <button>DETAILS</button>
+                    </div>
+
+                </div>
+                <!--**************************************************-->
+            </div>
+
+
+
+
+
+            <div id="productDetails">
+                <p>OUR SERVICES AND PRODUCT</p>
+                <p id="pname"><b>Product Name</b></p>
+                <button>DISCOVER NOW</button>
+            </div>
+<!--    *********************** Transactional Details ************************** -->
+
+            <div id="transactionDetails">
+                <div id="one">
+                    <img src="greyCircle.jpg" width="20" height="40" >
+                    <p>Transctions</p>
+                    <select id="tdm">
+                        <option value="">Month</option>
+                    </select>
+
+                </div>
+
+
+                <div id="two">
+                    <!--Second Row -->
+                    <div>
+                        <p class="left-txt">Today</p>
+                        <p class="center-txt">Card Transaction- Paypal-26/02/2016</p>
+                        <p class="right-txt">$-22.0</p>
+                    </div>
+                    <div>
+                        <p class="left-txt">Friday</p>
+                        <p class="center-txt">Money Transfer-Rentals -26/02/2016</p>
+                        <p class="right-txt">$-23.0</p>
+                    </div>
+                    <div>
+                        <p class="left-txt">Tuesday</p>
+                        <p class="center-txt">Card Purchase-Fashion store-26/02/2016</p>
+                        <p class="right-txt">$-24.0</p>
+                    </div>
+                    <div>
+                        <p class="left-txt">Today</p>
+                        <p class="center-txt">Card Purchase- Fashion store-26/02/2016</p>
+                        <p class="right-txt">$-25.0</p>
+                    </div>
+
+                </div>
+
+
+
+                <div id="three">
+                    <p><b>10+ See More Transactions</b></p>
+                    <p style="float: right"><b>All Transaction in February</b></p>
+                </div>
+
+
+
+                <div id="four">
+                    <div class="a">
+                        <p><b>Toal spending of February</b></p>
+                    </div>
+                    <div class="b">
+
+                    </div>
+                    <div class="b"></div>
+                    <div class="b"></div>
+
+                </div>
+
+
+                <div id="five">
+                    <div>
+                        <p>CUSTOMER SURVEY</p>
+                        <button>SEND</button>
+                    </div>
+                    <div style="float:right">
+                        <P>CURRENCY</P>
+                        <select class="sa">
+                            <option value="1500">$1500</option>
+                        </select>
+                        <select class="sa">
+                            <option value="1500">$1500</option>
+                        </select>
+                        <button>SHOW CURRENCY</button>
+                    </div>
+
+                </div>
+            </div>
+<!--    ******************************************************  -->
+            <div id="calender">
+
+            </div>
+
+            <div id="stockM">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
