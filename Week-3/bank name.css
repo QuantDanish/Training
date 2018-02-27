@@ -1,0 +1,147 @@
+#bankName {
+    /* constructing*/
+    width: 47%;
+    height: 150px;
+    background-color: #B0B0B0;
+    border-radius: 6px;
+    /* positioning*/
+    position: absolute;
+    display: inline-block;
+    top:5%;
+    left:1%;
+    /* formatting */
+    padding :10px 10px 10px 10px ;
+
+}
+
+#bn {
+    color: white;
+    margin: 1px 1px 1px 1px;
+    font-size: 36px;
+    width:60%;
+    height: 30%;
+    position: absolute;
+}
+
+#settingIcon {
+    display: inline-block;
+    position: absolute;
+    right:3%;
+}
+
+#upic {
+    border-radius: 50px;
+    position: absolute;
+    right: 17%;
+    top: 16%;
+}
+
+#uName {
+
+    position: absolute;
+    bottom: 12%;
+    right: 5%;
+    color: white;
+    margin: 1px 1px 1px 1px;
+}
+
+#notiCount {
+    /*  creating notification number counter */
+    width:20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: inline-block;
+
+
+    /*  positioning */
+    position: absolute;
+    right: 15%;
+    top:16%;
+    text-align: center;
+}
+
+
+
+
+
+#greeting {
+    position: absolute;
+    bottom: 15%;
+    color: white;
+}
+
+
+#ll {
+    position: absolute;
+    bottom: 5%;
+    color: white;
+    margin: 1px 1px 1px 1px;
+}
+
+
+
+
+
+/*---------------       Stylings for Second right box --------------------------------------------*/
+#accountInfo {
+    /* constructing*/
+    width: 47%;
+    height: 150px;
+    border-radius: 6px;
+    background-color:white;
+
+    /* positioning*/
+    position: absolute;
+    display: inline-block;
+    top:5%;
+    right:1%;
+    /* formatting */
+    padding :10px 10px 10px 10px ;
+
+
+}
+
+#left {
+    display: inline-block;
+    width: 50%;
+    height: 90%;
+    position: absolute;
+    left: 1%;
+}
+
+
+#left select {
+    padding: 10px 70px 10px 13px;
+    max-width: 100%;
+    height: auto !important;
+    border: 1px solid #e3e3e3;
+    border-radius: 6px;
+    background: url("selectbox_arrow.png") right center no-repeat;
+    background-color: #fff;
+    color: darkgrey;
+    line-height: 16px !important;
+
+    -webkit-appearance: none;
+
+    position: relative;
+    bottom: -22%;
+    box-shadow: 1px 1px lightgrey;
+}
+#balance {
+    font-size: 40px;
+
+}
+
+
+#right {
+    width:50%;
+    height: 90%;
+    display: inline-block;
+    position: absolute;
+    right: 1%;
+  }
+#right p {
+    font-size: 20px;
+    pading:2px 0 2px 1px;
+}
