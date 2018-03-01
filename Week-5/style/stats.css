@@ -1,0 +1,176 @@
+* {
+    
+    margin:0;
+}
+
+p {
+    font-family: 'AvenirNext',sans-serif,arial;/*'Arimo', sans-serif;*/
+    padding: 5px;
+    display: inline-block;
+}
+
+select {
+    height: auto;
+    color:darkgrey;   
+    background: url("../images/selectbox_arrow.png") right center no-repeat;
+    background-color: #fff;
+    -webkit-appearance: none;
+    border-radius: 6px;
+    border: 1px solid #e3e3e3;
+
+}
+span {
+    font-family: 'AvenirNext',sans-serif,arial;/*'Arimo', sans-serif;*/
+    font-size: 0.9em;
+}
+
+img {
+    opacity: 0.5;
+    width: -webkit-fill-available;
+    height: 300px;
+}
+
+.wrapper    {
+    height: 1200px;
+    width:100%;
+    background-color: #b7e293;/*b7e293 c0dfd9 #c0dfd9*/
+
+}
+
+.heading {
+    display: flex;
+    height: 300px;
+    font-size: 5em;
+    font-weight: 200;
+    color: white;
+
+}
+
+.heading p{
+    position: absolute;
+    left: 150px;
+    top: 150px;
+}
+
+/* Styling for the selection box */
+#data-selector-div {
+    display: flex;
+    padding: 10px 20px 10px 20px;
+}
+
+
+#data-selector-div select {
+    float: right;
+    
+    padding: 10px 70px 10px 13px;
+    background-size: 5%;
+    color: darkgrey;
+    font-size: 1.2em;
+    width: 90%; 
+    position: relative;
+    bottom: -22%;
+    box-shadow: 1px 1px lightgrey;
+}
+
+
+/*  For the chart area*/
+.chartArea {
+    height: 800px;
+    padding: 20px;
+}
+
+
+#chart-type {
+    padding: 5px 40px 5px 10px;
+    font-size: 1em;
+}
+
+#dataset {
+    margin-left: 10px;
+    padding: 5px 40px 5px 10px;
+    font-size: 0.8em;
+}
+
+#labels {
+    margin-left: 10px;
+    padding: padding: 5px 40px 5px 10px;
+    font-size: 0.9em;
+}
+
+div.chart-container {
+    height: 650px !important;
+    width: 1200px !important;
+    
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 8px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: darkgrey;
+    
+    font-family: 'AvenirNext',sans-serif,arial;/*'Arimo', sans-serif;*/
+    background-color: white;
+    border-radius: 8px;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+div.chart-options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+
+
+
+button {
+    font-family: 'AvenirNext',sans-serif,arial;/*'Arimo', sans-serif;*/   
+    text-align: center;
+    border-radius: 8px;
+}
+
+#reset {
+    padding: 10px 40px;
+    border-radius: 14px;
+    font-size: 1em;
+    background-color: white;
+    color: darkslategrey;
+ 
+}
+
+.go {
+    color:white;    
+    background-color: green;
+    font-size: 1.2em;
+    padding: 10px 60px;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+
+
+

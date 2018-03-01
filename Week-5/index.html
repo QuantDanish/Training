@@ -1,0 +1,127 @@
+<!-- This page is designed for the plotting the data selected by the user. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Charts</title>
+	<link rel="stylesheet" type="text/css" href="./style/stats.css">
+</head>
+<body>
+	<!-- Web page Wrapper div -->
+	<div class="wrapper">
+		<!-- heading for the web page -->	
+		<div class="heading">
+			<img src="./images/boy.jpeg">
+            		<p>EDUCATION STATISTICS</p>
+        	</div>
+
+	        <!-- Selection box to select the data for the visualization -->
+	        <div id="data-selector-div" >
+	        	<select id="data-selector" onmousewheel="false">
+		                <option value=""> Choose Data From Here </option>
+
+		                <option value= 'https://api.data.gov.in/resource/4f3a84b7-776f-4246-9324-226ed8b1dad5?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3&limit=34'>Number of primary/secondary/senior/Schools and Board state-wise 2011-12</option>
+
+		                <option value="https://api.data.gov.in/fresource/2883e1d9-25a5-40f4-82a8-16e21ae0c108?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3&limit=34">Number of primary/secondary/senior/Schools and Board state-wise 2010-11</option>
+
+		                <option value="https://api.data.gov.in/resource/8ee1905b-5949-4a60-9954-18776659ec44?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3&filters[year]=2013-14">Percentage of Schools with Computers from 2013-14</option>
+		                
+		                <option value="https://api.data.gov.in/resource/8ee1905b-5949-4a60-9954-18776659ec44?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3&filters[year]=2014-15">Percentage of Schools with Computers from 2014-15</option>
+
+		                <option value="https://api.data.gov.in/resource/8ee1905b-5949-4a60-9954-18776659ec44?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3&filters[year]=2015-16">Percentage of Schools with Computers from 2015-16</option>
+		                
+
+		                <option value="https://api.data.gov.in/resource/6c1455e9-910e-466b-a99d-257ac5560fe1?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3">High school examination pass percentage during 2005-2010</option>
+		                
+		                <option value="https://api.data.gov.in/resource/8aaff60f-4036-466a-a032-2441c1b40b52?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3"> State-wise Percentage of Schools having Boys Toilet 2012-2013</option>
+
+		                <option value="https://api.data.gov.in/resource/285789ec-e7c1-4a78-9737-3bd6d81bc02c?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3&filters[year]=2015-16">Schools with Girls Toilet 2015-16</option>
+
+		                <option value="https://api.data.gov.in/resource/4dbf9a0f-a125-40d2-8822-adb31e028825?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3&fields=state_name,number_of_schools_without_facilities___toilets,number_of_schools_without_facilities___water&limit=36">State-wise Position on Number of Government Schools Lacking Access to Basic Amenities</option>
+
+		                <!--  -->
+
+		                
+		                <option value="https://api.data.gov.in/resource/b472d012-ef3b-43bf-a45d-5ca2b2869680?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3">State/UT-wise number of school education institutions - 2008-09</option>
+
+		                <option value="https://api.data.gov.in/resource/b1ff6ca1-eea0-43a3-b3ac-e58b690dcbaf?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3">State wise number of students availing education loan - 2012-2013</option>
+		                
+		                <option value="https://api.data.gov.in/resource/a30f5d17-b61f-4533-ae10-ffe9d5d0f180?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3">State wise number of students availing education loan - 2011-2012</option>
+
+		                <option value="https://api.data.gov.in/resource/3004352e-91d6-4964-8f23-7d0e92e36e0a?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3">State-wise number of university offering education through distance mode - 2011-2012</option>
+
+		                <option value="https://api.data.gov.in/resource/6764ebc3-49a4-4249-afc8-132cf6a34644?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3">State-wise number of university offering education through distance mode - 2010-2011</option>
+		                
+		                <option value="https://api.data.gov.in/resource/07ed1f14-c846-453b-8851-d1c00a23acf3?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3">State and post-wise number of male and female teachers for all education institution - 2012-2013</option>
+
+		                <option value="https://api.data.gov.in/resource/2bb0b4df-cc9a-44f1-9e25-ed6ced46aba1?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3">State and post-wise number of male and female teachers for all education institution - 2011-2012</option>
+
+		                <option value="https://api.data.gov.in/resource/b9bdfa0e-92df-41ca-80ea-a737fec8f67b?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3">Results of high school examination of opening school-2008</option>
+
+		                
+
+		                <option value="https://api.data.gov.in/resource/2317a159-2cc3-4abe-9d57-1136a3002f2a?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3">Number of primary and upper primary school at all India level from year 2001 to 2010</option>
+		                
+		                <option value="https://api.data.gov.in/resource/2317a159-2cc3-4abe-9d57-1136a3002f2a?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3&filters[school_type]=Primary School&fields=india_state_uts,_2001,_2002,_2003,_2004,_2005,_2006,_2007,_2008,_2009,_2010">Number of primary school at all India level from year 2001 to 2010</option>
+
+		                <option value="https://api.data.gov.in/resource/2317a159-2cc3-4abe-9d57-1136a3002f2a?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3&filters[school_type]=Upper Primary School&fields=india_state_uts,_2001,_2002,_2003,_2004,_2005,_2006,_2007,_2008,_2009,_2010">Number of Upper primary school at all India level from year 2001 to 2010</option>
+		                
+		                <option value="https://api.data.gov.in/resource/531f8b64-8dda-459c-927b-48908f768b3e?format=json&api-key=579b464db66ec23bdd0000019366736b9bf34a5c73087f7eff8d1ac3&filters[india_state_uts]=India&fields=school_type,_2001,_2002,_2003,_2004,_2005,_2006,_2007,_2008,_2009,_2010">Number of secondary and senior secondary Schools at all India level from year 2001 to 2010</option>
+	            	</select>
+	        </div>
+
+	        <!-- This area will contains the information related to the data selected by the user &filters[india_state_uts]=India-->
+	        <!-- It will be shown only when the user selects a data from the selection box -->
+	        <div class="data-content">
+		        <!-- plotting a single chart on the page  -->
+		        <div class="chartArea hide">
+		            <!--  -->
+		            
+		            <!-- some options for the current chart -->
+		            <div id="chart-info" >
+		                <p>Click on the label name to display/hide the representation.</p>
+		                
+		                <div class="chart-options">
+			                
+			                <select id="chart-type" onmousewheel="false">
+				                <option value="bar">Bar Chart</option>
+				                <option value="line">Area Chart</option>
+				                <option value="pie">Pie Chart</option>
+				                <option value="radar">Radial Chart</option>
+				                <option value="polarArea">Polar Area Chart</option>
+			                </select>
+			                
+			                <select id="dataset" onmousewheel="false">			                	
+			                </select>
+
+			                <div class="dropdown">
+			                	<span>Choose Labels For Chart</span>
+			                	<div class="dropdown-content hide">
+			                		
+			                	</div>
+			                </div>
+
+			                
+		                	
+		                </div>
+		            </div>
+
+
+		            <!-- char number 1 -->
+		            <div class="chart-container">
+		                <canvas id="chart_1"></canvas>
+		            </div> 
+		        </div>
+	        	
+	        </div>
+	        <!-- Library for the chartjs -->
+        	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	        <script type="text/javascript" src="./script/dom.js"></script>
+	        <script type="text/javascript" src="./script/chart.js"></script>
+	        <script type="text/javascript" src="./script/data.js"></script>
+	        <script type="text/javascript" src="./script/app.js"></script>
+
+
+	</div>
+</body>
+</html>
