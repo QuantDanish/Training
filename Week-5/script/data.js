@@ -1,4 +1,46 @@
+/*	- chartData class contains data retrived from the ajax call. i.e it is the transformed
+		data after applying transformation function.
+	- title is the name of data retrived.
+	- count coantains number of data records. i.e number of rows of data.
+	- attributes is  an array of string containing the attributes provided by the data
+		which is to be shown on top of chart after title.
+	- datasets is an array of object of type datasetEntry as defined in next code block.
+*/
 
+class chartData {
+	constructor( dataNum = 0,inputTitle = "", attrbuteArray = [], datasetArray = []) {
+		this.title = inputTitle;
+		this.count = dataNum;
+		this.attributes = attrbuteArray;
+		this.datasets = datasetArray;
+
+	}
+}
+
+
+/*	- This is data structure used by the chartjs library to use dataset.
+	- each object in the array of dataset must have following property.
+*/
+class datasetEntry {
+	constructor(labelName = "" , myBgColor= getColorArray(1)[0],dataArray = []) {
+		let self =  this;
+		self.label= labelName,
+		self.backgroundColor= myBgColor,
+		self.data= dataArray		// numeric array
+	}
+}
+
+
+/*	-This class will be used to get the current status of the data containing the chart
+	context, chart data, url and map Object.
+*/
+class chartStatus {
+	constructor(chartdata=null, chart=null, url="", mapObject= new Map()) {
+		this.chartdata = chartdata;	// in transformed form
+		this.chart = chart;			// chart object
+		this.url = url;				// current url
+	}
+}
 
 
 /*
