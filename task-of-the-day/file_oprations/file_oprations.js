@@ -4,15 +4,15 @@ const file 	=	__dirname+'/../data/data.json';
 
 
 
-/* find a user in the database  withPassword is boolean 
+/* find a user in the database  withpassword is boolean 
 	wheater to perfome matching	with password or not\
 */
-module.exports.findUser = (username, password, withPassword) => {
+module.exports.findUser = (username, password, withpassword) => {
 	try{
 		let temp =  jsonfile.readFileSync(file);
 		return temp.findIndex((item) => {
-			return (item.Username === username) ?
-			(withPassword? item.Password === password: true) 
+			return (item.username === username) ?
+			(withpassword? item.password === password: true) 
 			:false;
 		})
 	}catch(err){
@@ -29,13 +29,21 @@ module.exports.addUser = (username, password) => {
 	try{
 		let temp	=	jsonfile.readFileSync(file);
 		let user 	=	{
-			Username:username,
-			Password: password
+			username:username,
+			password: password
 		};
+		let index 	=	temp.findIndex((item) => {
+			item.username == user.username;
+		});
+
+		if(index !== -1) return false;
 		temp.push(user);
+
 		jsonfile.writeFileSync(file, temp);
+		return true;
 	}catch(err){
 		console.log(err.message)
+		return false;
 	}
 
 }
@@ -43,12 +51,12 @@ module.exports.addUser = (username, password) => {
 
 /* updating password of a user*/
 
-module.exports.updatePassword = (username, password) => {
+module.exports.updatepassword = (username, password) => {
 	try{
 		let temp	=	jsonfile.readFileSync(file);
 
 		let index 	=	temp.findIndex((item, index) => {
-			return item.Username === username;
+			return item.username === username;
 		});
 
 		if( index === -1){
@@ -56,7 +64,7 @@ module.exports.updatePassword = (username, password) => {
 		}
 
 		let user = temp[index];
-		user.Password = password;
+		user.password = password;
 		
 		jsonfile.writeFileSync(file, temp);
 		return true;
@@ -75,7 +83,7 @@ module.exports.removeUser = (username, password) => {
 	try{
 		let temp	=	jsonfile.readFileSync(file);
 		let index 	=	temp.findIndex((item ) => {
-			return item.Username === username;
+			return item.username === username;
 		});
 
 		if(index === -1){
@@ -100,8 +108,8 @@ module.exports.showUser = () => {
 		let userList=	[];
 
 		for(let user of temp) {
-			userList.push(user.Username);
-			console.log(user.Username);
+			userList.push(user.username);
+			console.log(user.username);
 		}
 		return  userList;
 	}catch(err){

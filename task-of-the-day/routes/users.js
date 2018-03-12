@@ -23,11 +23,16 @@ router.get('/', function(req, res, next) {
 
 /* POST add user*/
 router.post('/', (req, res, next)=> {
-	file.addUser(req.body.Username, req.body.Password);
-
+	let message = "Please Enter a valid username and password.";
+	console.log(req.body.username, req.body.password);
+	if(req.body.username !== undefined || req.body.password !== undefined) {
+		if(file.addUser(req.body.username, req.body.password))
+			message = "You Have been Added as user.";
+		else message = "username Already Exists.!";
+	}
 	res.render("layout", {
 		title:"User Page",
-		body:"You have been added. !!"
+		body:`<h1>${message}</h1>`
 	});
 });
 
@@ -35,9 +40,9 @@ router.post('/', (req, res, next)=> {
 
 /* PUT update user details */
 router.put('/', function(req, res, next) {
-	let message='Username NOT FOUND';
-	if(file.updatePassword(req.body.Username, req.body.Password)) {
-		message = "Your Password successfully updated";
+	let message='username NOT FOUND';
+	if(file.updatepassword(req.body.username, req.body.password)) {
+		message = "Your password successfully updated";
 	}
 
 	res.render("layout", {
